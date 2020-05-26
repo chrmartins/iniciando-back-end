@@ -15,7 +15,7 @@ class CreateAppointmentService {
 
     const appointmentDate = startOfHour(date); // Apenas horas cheias
 
-    const findappointmentInSameDate = appointmentsRepository.findByDay(
+    const findappointmentInSameDate = await appointmentsRepository.findByDay(
       appointmentDate,
     );
 
